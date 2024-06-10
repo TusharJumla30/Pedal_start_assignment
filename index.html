@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4" style="color: rgb(28, 123, 247);">Task Management Application</h1>
+        <div id="task-list" class="list-group mb-4"></div>
+        <button id="add-task-button" class="btn btn-primary">Add Task</button>
+    </div>
+
+    <!-- Modal for Add/Edit Task -->
+    <div id="task-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="task-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Add Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="task-form">
+                        <input type="hidden" id="task-id">
+                        <div class="form-group">
+                            <label for="task-title">Title:</label>
+                            <input type="text" id="task-title" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-description">Description:</label>
+                            <textarea id="task-description" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-due-date">Due Date:</label>
+                            <input type="date" id="task-due-date" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Task</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
